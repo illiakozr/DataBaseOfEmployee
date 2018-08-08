@@ -273,6 +273,6 @@ public class Logic {
             }
         }
         writeNewSetOfEmployee(newSetOfEmployee);
-        //scanner.close();
+
     }
 }
