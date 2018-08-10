@@ -113,15 +113,24 @@ public class Logic {
         String s;
         while (!(s = scanner.nextLine()).equals("break")) {
 
+            boolean searchFlag = false;
             String[] parts = s.split("; ");
+            if (parts.length < 3){
+                System.out.println("incorrect input");
+                continue;
+            }
 
             Iterator SetIterator = readEmployeesFromFile().iterator();
             while (SetIterator.hasNext()) {
                 Employee employee = (Employee) SetIterator.next();
                 if (parts[0].equals(employee.getLastName()) && parts[1].equals(employee.getName())
                         && parts[2].equals(employee.getSurname())) {
+                    searchFlag = true;
                     System.out.println(employee.toString());
                 }
+            }
+            if (!searchFlag){
+                System.out.println("did not find this employee");
             }
         }
        // scanner.close();
