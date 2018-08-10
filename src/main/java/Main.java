@@ -1,6 +1,20 @@
 
 import java.util.Scanner;
 
+/*
+Якщо виникає помилка типу
+Exception in thread "main" java.lang.NumberFormatException: For input string: "﻿1"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at Logic.createEmployee(Logic.java:53)
+	at Logic.readEmployeesFromFile(Logic.java:79)
+	at Logic.viewEmployeeData(Logic.java:123)
+	at Main.main(Main.java:36)
+
+файл з базою працівників потрібно перекодувати в UTF-8 без BOM
+ */
+
 public class Main {
     public static void main(String[] args){
 
