@@ -37,9 +37,11 @@ public class Main {
             }
             catch (NumberFormatException e){
                 System.out.println("incorrect format");
+                continue;
             }
             if (numAction < 1 || numAction > 6){
                 System.out.println("incorrect number");
+                continue;
             }
             switch (numAction){
                 case 1 : logic.addNewEmployee(); break;
