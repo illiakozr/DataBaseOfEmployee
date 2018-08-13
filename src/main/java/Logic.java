@@ -148,6 +148,11 @@ public class Logic {
 
             String[] parts = s.split("; ");
 
+            if (parts.length < 3) {
+                System.out.println("incorrect input");
+                continue;
+            }
+
             Iterator SetIterator = readEmployeesFromFile().iterator();
             boolean searchFlag = false;
             while (SetIterator.hasNext()) {
@@ -256,6 +261,11 @@ public class Logic {
         while (!(s = scanner.nextLine()).equals("break")) {
 
             String[] parts = s.split("; ");
+
+            if (parts.length < 3) {
+                System.out.println("incorrect input");
+                continue;
+            }
 
             Iterator SetIterator = readEmployeesFromFile().iterator();
             boolean searchFlag = false;

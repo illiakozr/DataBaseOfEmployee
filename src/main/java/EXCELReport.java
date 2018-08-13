@@ -3,7 +3,6 @@ import org.apache.poi.ss.usermodel.*;
 
 import java.io.FileOutputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -149,6 +148,7 @@ public class EXCELReport {
               wb.close();
               System.out.println("report has been created");
           } catch (java.io.IOException e) {
+              e.printStackTrace();
               System.out.println("can't create a report");
           }
       }
