@@ -31,6 +31,7 @@ public class Logic {
 
                 Employee.employees.add(employee);
                 writer.write(employee.toString() + "\r\n");
+                System.out.println("has been added successfully");
 
             }catch (Exception e){
                 System.out.println("incorrect input format");
